@@ -1,0 +1,120 @@
+.ske-bg {
+  position: relative;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  background: #e6e6e6 !important;
+  mask: transparent !important;
+  opacity: 1 !important;
+ 
+  // display: inline-block;
+  // span{
+  //   display: inline-block;
+  // }
+  &::after {
+    mask: transparent !important;
+    // background: transparent !important;
+  }
+  &::before {
+    mask: transparent !important;
+    // background: transparent !important;
+  }
+
+  &.ske-btn {
+    border-color: transparent !important;
+    background: #e6e6e6 !important;
+  }
+
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   border-radius: 2px;
+  //   background: #f4f4f4
+  //     linear-gradient(
+  //       90deg,
+  //       rgba(0, 0, 0, 0.06) 50%,
+  //       rgba(0, 0, 0, 0.15) 50%,
+  //       rgba(0, 0, 0, 0.06) 63%
+  //     );
+  //   background-size: 400% 100%;
+  //   animation-name: loading;
+  //   animation-duration: 1.4s;
+  //   animation-timing-function: ease;
+  //   animation-iteration-count: infinite;
+  // }
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    background: #f4f4f4
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.06) 50%,
+        rgba(0, 0, 0, 0.15) 50%,
+        rgba(0, 0, 0, 0.06) 63%
+      );
+    background-size: 400% 100%;
+    animation-name: loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+  textarea {
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+  }
+  input {
+    font-size: 0 !important;
+    &::-webkit-input-placeholder {
+      font-size: 0 !important;
+      color: transparent !important;
+    }
+    &:-moz-placeholder {
+      /* FF 4-18 */
+      font-size: 0 !important;
+      color: transparent !important;
+    }
+    &::-moz-placeholder {
+      /* FF 19+ */
+      font-size: 0 !important;
+      color: transparent !important;
+    }
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      font-size: 0 !important;
+      color: transparent !important;
+    }
+  }
+  &.ske-textarea {
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+  }
+  &.ske-inline-block {
+    display: inline-block;
+  }
+  &.ske-input {
+    font-size: 0;
+  }
+
+  .ske-ignore {
+    background: transparent !important;
+    mask: transparent !important;
+    color: transparent !important;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0% 50%;
+  }
+}

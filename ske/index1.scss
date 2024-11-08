@@ -1,0 +1,93 @@
+// /** 骨架屏样式 */
+
+.skeleton1 {
+  position: fixed;
+  background: #f4f4f4
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.06) 50%,
+      rgba(0, 0, 0, 0.15) 50%,
+      rgba(0, 0, 0, 0.06) 63%
+    );
+  background-size: 400% 100%;
+  animation-name: loading;
+  animation-duration: 1.4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// let skeletonHtml = "<style>.skeleton {position: fixed;background: #eee;animation: opacity 2s ease infinite;} @keyframes opacity {0%{opacity: 1;}50%{opacity: 0.4;}100%{opacity: 1;}} </style>";
+
+// const removeClass = [];
+// const removeId = [];
+
+// function createDiv(node, customStyle) {
+//     let { width, height, top, left } = node.getBoundingClientRect();
+//     const nodeClassName = node.className ? `node-class=${node.className}`:"";
+//     const nodeId = node.id ? `node-id=${node.id}`:"";
+//     const { borderRadius } = getComputedStyle(node, null)
+//     const { innerWidth, innerHeight } = window
+//     // 必须符合要求的元素才渲染：有大小，并且在视图内;
+//     if (width > 5 && height > 5 && top < innerHeight && left < innerWidth) {
+//         width = ((width / innerWidth) * 100).toFixed(2) + '%'
+//         height = ((height / innerHeight) * 100).toFixed(2) + '%'
+//         left = ((left / innerWidth) * 100).toFixed(2) + '%'
+//         top = ((top / innerHeight) * 100).toFixed(2) + '%'
+//         skeletonHtml += `<div class="skeleton" ${nodeClassName} ${nodeId} style="width:${width};height:${height};left:${left};top:${top};border-radius:${borderRadius};"></div>`
+//     }
+// }
+
+// function getDom(options = { removeElements: [] }) {
+//     const { removeElements } = options
+//     for (let i = 0; i < removeElements.length; i++) {
+//         const el = removeElements[i]
+//         const reg = /^./
+//         if (el.match(reg) == ".") {
+//             removeClass.push(el.substr(1))
+//         }
+//         if (el.match(reg) == "#") {
+//             removeId.push(el.substr(1))
+//         }
+//     }
+//     const dom = document.body;
+//     const nodes = dom.childNodes;
+//     dom.style.overflow = "hidden";
+//     deepNode(nodes); // 遍历节点生成骨架屏框架 html
+//     return skeletonHtml;
+// }
+
+// function isRemove(node) {
+//     const { className, id } = node;
+//     if (className || id) {
+//         for (let i = 0; i < removeClass.length; i++) {
+//             if (className.indexOf(removeClass[i]) > -1) {
+//                 return true;
+//             }
+//         }
+//         if (removeId.includes(id)) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
