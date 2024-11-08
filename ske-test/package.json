@@ -1,0 +1,29 @@
+{
+  "name": "@ali/test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/counter.umd.cjs",
+  "module": "./dist/counter.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/counter.js",
+    "require": "./dist/counter.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "publishConfig": { 
+      "registry": "https://registry.anpm.alibaba-inc.com"
+  },
+  "devDependencies": {
+    "vite": "^5.2.10"
+  },
+  "repository": "git@gitlab.alibaba-inc.com:icbu-seller-components/ske-gyptest2.git"
+}
